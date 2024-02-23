@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 let titulo = 'Hellow alou world mundo'
@@ -9,6 +10,14 @@ export default function Topo(){
             <div>Logo</div>
             <div className="tituloTopo">{titulo}</div>
             <div>{nome}</div>
+            <nav>
+                <Link href={"/produtos/produtos"}>
+                    Produtos
+                </Link>
+                <Link href={"/teste/teste"}>
+                    Pag Teste
+                </Link>
+            </nav>
         </div>
     );
 }
