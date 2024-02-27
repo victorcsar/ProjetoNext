@@ -2,7 +2,8 @@ interface CardProps {
     produto: string,
     valor: number,
     desconto: number,
-    funcao: any
+    funcao: any,
+    children:any
 
 }
 

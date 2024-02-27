@@ -1,5 +1,7 @@
 import Card from "@/components/Card";
 import Topo from "@/components/Topo";
+import { useRouter } from "next/router";
+
 
 function calcDesc(v: number, d: number) {
     const result = v - d;
@@ -38,20 +40,27 @@ const produtos = [
 ]
 
 
-export default function produtosPagina() {
-    <div>
-        <Topo />
+export default function ProdutosPagina() {
+    const router = useRouter()
+    const { nome, sobrenome } = router.query
 
-        <div className='flex justify-center gap-6'>
-            {
-                produtos.map((e: any, index) => {
-                    if (e.disponivel) {
-                        return (
-                            <Card key={index} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc} />
-                        )
-                    }
-                })
-            }
+    return (
+        <div>
+            <Topo />
+
+            <div className='flex justify-center gap-6'>
+                {
+                    produtos.map((e: any, index) => {
+                        if (e.disponivel) {
+                            return (
+                                <Card key={index} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}>
+                                    Um produto
+                                </Card>
+                            )
+                        }
+                    })
+                }
+            </div>
         </div>
-    </div>
+    )
 }
