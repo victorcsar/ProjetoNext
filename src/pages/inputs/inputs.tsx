@@ -1,5 +1,6 @@
 import Topo from "@/components/Topo";
-import { useState } from "react";
+import Globais from "@/components/Globais";
+import { useState, useEffect } from "react";
 
 const disponiveis = ["sim", "nao"]
 
@@ -8,6 +9,11 @@ export default function inputs() {
     const [produto, setNomeProduto] = useState<string>("test")
     const [valor, setValor] = useState<string>("")
     const [disponivel, setDisponivel] = useState<string>("")
+
+
+    useEffect(()=>{
+        Globais.empresa ='TESTE'
+    })
 
     return (
         <div>
@@ -33,6 +39,9 @@ export default function inputs() {
             <div>Produto digitado: {produto}</div>
             <div>Valor: {valor}</div>
             <div>disponivel: {disponivel}</div>
+            <div>{Globais.empresa}</div>
+            <div>{Globais.cnpj}</div>
+            <div>{Globais.ano}</div>
         </div>
     )
 }
