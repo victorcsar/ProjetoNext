@@ -1,0 +1,58 @@
+[
+    {
+        "id": "637de713949aa140",
+        "type": "tab",
+        "label": "Curso React Next",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f48317d2c5010f4b",
+        "type": "http in",
+        "z": "637de713949aa140",
+        "name": "",
+        "url": "carros",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "a9e0d45952283c25"
+            ]
+        ]
+    },
+    {
+        "id": "a9e0d45952283c25",
+        "type": "function",
+        "z": "637de713949aa140",
+        "name": "",
+        "func": "\nmsg.payload = [\n    { id: 0, categ: \"Esporte\", valor: \"120000.00\", modelo: \"Golf GTI\" },\n    { id: 1, categ: \"Esporte\", valor: \"200000.00\", modelo: \"Camaro\" },\n    { id: 2, categ: \"SUV\", valor: \"100000.00\", modelo: \"HRV\" },\n    { id: 3, categ: \"SUV\", valor: \"100000.00\", modelo: \"T-CROSS\" },\n    { id: 4, categ: \"Utilitario\", valor: \"180000.00\", modelo: \"Hilux\" },\n    { id: 5, categ: \"Utilitario\", valor: \"160000.00\", modelo: \"Ranger\" },\n]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "4955362f5bb54549"
+            ]
+        ]
+    },
+    {
+        "id": "4955362f5bb54549",
+        "type": "http response",
+        "z": "637de713949aa140",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 200,
+        "wires": []
+    }
+]
