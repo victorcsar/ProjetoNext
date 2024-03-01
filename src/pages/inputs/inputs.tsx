@@ -31,7 +31,7 @@ export default function Inputs() {
                 <select value={disponivel} onChange={(evt) => setDisponivel(evt.target.value)}>
                     {
                         disponiveis.map((d:any)=>{
-                            return <option value={d}>{d}</option>
+                            return <option value={d} key={Math.random()*9999999999999999999999}>{d}</option>
                         })
                     }
                 </select>
