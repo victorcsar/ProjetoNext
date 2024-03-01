@@ -1,7 +1,7 @@
 import Topo from "@/components/Topo"
 import { useEffect,useState } from "react"
 
-export default function useeffect(){
+export default function Useeffect(){
 
     const [cont, setCont]=useState<number>(0)
 

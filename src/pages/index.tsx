@@ -1,5 +1,4 @@
 import Topo from "@/components/Topo";
-import produtosPagina from "./produtos/produtos";
 
 
 

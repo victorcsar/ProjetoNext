@@ -5,7 +5,7 @@ import Topo from "@/components/Topo"
 
 
 
-export default function usestate() {
+export default function Usestate() {
     const [cont, setCont] = useState<number>(0)
 
 

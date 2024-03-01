@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const disponiveis = ["sim", "nao"]
 
 
-export default function inputs() {
+export default function Inputs() {
     const [produto, setNomeProduto] = useState<string>("test")
     const [valor, setValor] = useState<string>("")
     const [disponivel, setDisponivel] = useState<string>("")
